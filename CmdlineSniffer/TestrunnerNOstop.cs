@@ -2,12 +2,16 @@
 
 namespace PyLauncher
 {
-    class TestrunnerNOstop : ITestrunner
+    public class TestrunnerNOstop : ITestrunner
     {
-        public TestrunnerNOstop()
-        { }
+        string runcommandarguments;
 
-        public void RunTest(Parameter.Test testparameters, string serialno = "")
+        public TestrunnerNOstop()
+        {
+            runcommandarguments = "";
+        }
+
+        public void Load(Parameter.Test testparameters, string serialno = "")
         {
             if (testparameters != null)
             {
@@ -19,8 +23,13 @@ namespace PyLauncher
                     else
                         parsaruments += (" " + s);
                 }
-                string runcommandarguments = testparameters.arguments + parsaruments;
+                runcommandarguments = testparameters.arguments + parsaruments;
             }
+        }
+
+        public void Runtest()
+        {
+            Console.WriteLine(runcommandarguments);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace PyLauncher
 {
     interface ITestrunner
     {
-        void RunTest(Parameter.Test testparameters, string serialno);
+        void Load(Parameter.Test testparameters, string serialno);
+        void Runtest();
     }
 }
