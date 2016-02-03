@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
@@ -144,13 +143,13 @@ namespace PyLauncher
                 Console.WriteLine(runcommandarguments);
                 Process p = new Process(); // create process (i.e., the python program)
                 
-                p.StartInfo.FileName = Testtime.filename;
+                p.StartInfo.FileName = Testtime.filename;//python.exe
                 p.StartInfo.Arguments = runcommandarguments;
                 p.StartInfo.RedirectStandardOutput = false;//check command line output
                 p.StartInfo.RedirectStandardError = false;//Have to check error
                 //p.StartInfo.RedirectStandardInput = false;
                 p.StartInfo.UseShellExecute = false; //we can read or not the output from stdout
-                p.StartInfo.WorkingDirectory = Testtime.workingdirectory;
+                p.StartInfo.WorkingDirectory = Testtime.workingdirectory;//c://workspace//teststuff
                 p.Start();
                 //string g = p.StandardError.ReadToEnd();
                 //string t = p.StandardOutput.ReadToEnd();//Reads the standard input
@@ -170,7 +169,7 @@ namespace PyLauncher
                 return "Could not find the test";
             }
 
-            return "done: ";
+            return "done from launcher: ";
         }
     }
 }

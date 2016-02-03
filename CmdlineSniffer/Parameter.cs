@@ -29,7 +29,7 @@ namespace PyLauncher
             public string id;//test name
             public string filename;//"for ex. pyhton.exe"
             public string workingdirectory;
-            public string arguments;//"path of to .py"
+            public string arguments;//"path to .py"
             [XmlElement("Parsstring")]
             public List<string> Parsstring;//5 for smoke test
             public string interceptio;
