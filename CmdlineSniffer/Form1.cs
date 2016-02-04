@@ -49,6 +49,8 @@ namespace PyLauncher
         //this is a recursive, asynchrounous funstion function method runs asynchronously
         private async void runmainprocess()
         {
+            //if the listbox2 is not empty it will keep running
+            //launching processes
             if(listBox2.Items.Count != 0)
             {
                 string testtorun = (string)(listBox2.Items[0]);
@@ -56,7 +58,9 @@ namespace PyLauncher
                 test = Regex.Replace(test, @"\s+", "%20");
                 Debug.WriteLine(test);
                 status = "Running";
+                //Add the item that is running now to listbox3
                 listBox3.Items.Add(testtorun);
+                //remove it from listbox 2
                 listBox2.Items.RemoveAt(0);
 
                 //**********get all the task parametrs here*********************
@@ -75,11 +79,10 @@ namespace PyLauncher
                     textBox4.Clear();
                     textBox4.Text = thetest.arguments + parametertext;
                 }
-                    //************END of finding the task parameters***********************
-
-                    //string value = report1.Reporttoserver(status, test, ref error);
-                    //A tast gets kickef off here
-                    string t = await Task.Run(() => Runtest(testtorun));
+                //************END of finding the task parameters***********************
+                //string value = report1.Reporttoserver(status, test, ref error);
+                //A tast gets kickef off here
+                string t = await Task.Run(() => Runtest(testtorun));
                 if (t.Contains("done"))
                 {
                     status = "Complete";
@@ -100,15 +103,20 @@ namespace PyLauncher
         //continuous reporting
         private async void Reporting()
         {
+            //writes the return message from the server
             textBox2.Text = await Task.Run(() => reporttoserver());
+            //check is the testlist are empty to see if reporting still needed
             if (keepreporting || listBox2.Items.Count != 0)
             {
-                if (listBox3.Items.Count != 0)//if no tasks running do not report
+                //if no tasks running do not report
+                if (listBox3.Items.Count != 0)
                 {
+                    button5.Enabled = false;//Disable diagnostics
                     Reporting(); //calls reporting againg
                 }
                 else
                 {
+                    //can not run diagnostics with test running
                     button5.Enabled = true;//Enable diagnostics
                     status = "Complete";
                     keepreporting = false;//stop reporting
@@ -144,32 +152,8 @@ namespace PyLauncher
                 }
                 string runcommandarguments = theparameters.arguments + parsaruments;
 
-
                 testrunnernostop.Load(theparameters,
                     (string)textBox1.Text.Substring(textBox1.Text.Length - 12));
-                /*
-                Process p = new Process(); // create process (i.e., the python program)
-                
-                p.StartInfo.FileName = Testtime.filename;//python.exe
-                p.StartInfo.Arguments = runcommandarguments;
-                p.StartInfo.RedirectStandardOutput = false;//check command line output
-                p.StartInfo.RedirectStandardError = false;//Have to check error
-                //p.StartInfo.RedirectStandardInput = false;
-                p.StartInfo.UseShellExecute = false; //we can read or not the output from stdout
-                p.StartInfo.WorkingDirectory = Testtime.workingdirectory;//c://workspace//teststuff
-                p.Start();
-                //string g = p.StandardError.ReadToEnd();
-                //string t = p.StandardOutput.ReadToEnd();//Reads the standard input
-                //Console.WriteLine(t);//prints it out
-                ///Console.WriteLine(g);//prints it out
-                p.WaitForExit();
-                if (p.ExitCode != 0)
-                {               
-                }
-                */
-               // itemtorun = Testtime.filename + Testtime.arguments + Testtime.Parsstring[0] +
-               //     Testtime.Parsstring[1] + Testtime.Parsstring[2] + Testtime.Parsstring[3] + Testtime.Parsstring[4];
-              //  Console.WriteLine(itemtorun);
             }
             else
             {

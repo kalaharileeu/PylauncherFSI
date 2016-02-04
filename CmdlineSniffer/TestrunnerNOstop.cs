@@ -7,6 +7,7 @@ namespace PyLauncher
     public class TestrunnerNOstop : ITestrunner
     {
         private Parameter.Test testparameters;
+        //private int totaltime;
 
         public void Load(Parameter.Test testparameters, string serialno = "")
         {
@@ -51,6 +52,8 @@ namespace PyLauncher
             //Console.WriteLine(t);//prints it out
             ///Console.WriteLine(g);//prints it out
             p.WaitForExit();
+            //int totaltimesec = (int)p.UserProcessorTime.Seconds;
+            System.TimeSpan totaltimesspan = p.ExitTime - p.StartTime;
         }
     }
 }

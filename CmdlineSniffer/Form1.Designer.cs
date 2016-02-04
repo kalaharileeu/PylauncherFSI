@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,12 +56,14 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(495, 718);
+            this.button2.Location = new System.Drawing.Point(490, 622);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 23);
             this.button2.TabIndex = 1;
@@ -75,7 +76,7 @@
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(12, 242);
+            this.listBox1.Location = new System.Drawing.Point(5, 156);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(340, 424);
             this.listBox1.TabIndex = 2;
@@ -86,7 +87,7 @@
             this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(383, 242);
+            this.listBox2.Location = new System.Drawing.Point(376, 156);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(364, 424);
             this.listBox2.TabIndex = 3;
@@ -97,7 +98,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 186);
+            this.label1.Location = new System.Drawing.Point(8, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 24);
             this.label1.TabIndex = 4;
@@ -107,7 +108,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(384, 186);
+            this.label2.Location = new System.Drawing.Point(377, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 24);
             this.label2.TabIndex = 5;
@@ -119,9 +120,9 @@
             this.listBox3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 24;
-            this.listBox3.Location = new System.Drawing.Point(66, 44);
+            this.listBox3.Location = new System.Drawing.Point(12, 34);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(490, 28);
+            this.listBox3.Size = new System.Drawing.Size(710, 28);
             this.listBox3.TabIndex = 6;
             // 
             // label3
@@ -129,32 +130,24 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(66, 12);
+            this.label3.Location = new System.Drawing.Point(8, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "This is running now:";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.progressBar1.Location = new System.Drawing.Point(578, 44);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 28);
-            this.progressBar1.TabIndex = 8;
-            // 
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(12, 685);
+            this.listBox4.Location = new System.Drawing.Point(12, 764);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(340, 69);
+            this.listBox4.Size = new System.Drawing.Size(340, 56);
             this.listBox4.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 218);
+            this.label4.Location = new System.Drawing.Point(9, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 13);
             this.label4.TabIndex = 10;
@@ -163,7 +156,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(392, 218);
+            this.label5.Location = new System.Drawing.Point(385, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(267, 13);
             this.label5.TabIndex = 11;
@@ -172,7 +165,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(436, 702);
+            this.label6.Location = new System.Drawing.Point(428, 606);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(242, 13);
             this.label6.TabIndex = 12;
@@ -181,7 +174,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 669);
+            this.label7.Location = new System.Drawing.Point(12, 748);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 13);
             this.label7.TabIndex = 13;
@@ -190,7 +183,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(382, 94);
+            this.label8.Location = new System.Drawing.Point(446, 16);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 13);
             this.label8.TabIndex = 14;
@@ -199,7 +192,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(385, 162);
+            this.label9.Location = new System.Drawing.Point(378, 85);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(238, 13);
             this.label9.TabIndex = 15;
@@ -208,7 +201,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(514, 685);
+            this.label10.Location = new System.Drawing.Point(507, 593);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 13);
             this.label10.TabIndex = 16;
@@ -217,7 +210,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(16, 94);
+            this.label11.Location = new System.Drawing.Point(111, 16);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(108, 13);
             this.label11.TabIndex = 18;
@@ -225,7 +218,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 122);
+            this.textBox1.Location = new System.Drawing.Point(91, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(154, 20);
             this.textBox1.TabIndex = 21;
@@ -234,7 +227,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(388, 119);
+            this.button1.Location = new System.Drawing.Point(381, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 22;
@@ -245,7 +238,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(476, 119);
+            this.button3.Location = new System.Drawing.Point(462, 36);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(80, 23);
             this.button3.TabIndex = 23;
@@ -256,7 +249,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(564, 119);
+            this.button4.Location = new System.Drawing.Point(548, 37);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 24;
@@ -283,7 +276,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button5.Location = new System.Drawing.Point(12, 775);
+            this.button5.Location = new System.Drawing.Point(629, 36);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 28;
@@ -323,42 +316,54 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Error:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Location = new System.Drawing.Point(7, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(752, 666);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "General User";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 892);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Test Launcher";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,7 +378,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -394,6 +398,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
