@@ -12,6 +12,7 @@ namespace PyLauncher
         string status;
         string error;
         string test;
+        TestrunnerNOstop testrunnernostop;
         Report Serverreporter;
         Readcmd CmdReader;
         XmlManager<Parameter> xmltestmanager;
@@ -21,10 +22,10 @@ namespace PyLauncher
         //string valuereport;
         bool keepreporting;
         
-
         public Form1()
         {
-           // valuereport = "default";
+            //for running processe/tests
+            testrunnernostop = new TestrunnerNOstop();
             storedvalues = new List<string>();
             status = "unknown";
             error = ".";
@@ -126,12 +127,14 @@ namespace PyLauncher
         //This function only gets called from asychronous functions.
         private string Runtest(string itemtorun)
         {
-            Parameter.Test Testtime = new Parameter.Test();
-            Testtime = tests.tests.Find(x => x.id.Equals(itemtorun));
-            if (Testtime != null)
+            //The next set of code searches out the code from the 
+            //instantiated test paremeters
+            Parameter.Test theparameters = new Parameter.Test();
+            theparameters = tests.tests.Find(x => x.id.Equals(itemtorun));
+            if (theparameters != null)
             {
                 string parsaruments = "";
-                foreach(string s in Testtime.Parsstring)
+                foreach(string s in theparameters.Parsstring)
                 {
                     if (s.Contains("SERIAL_NUMBER"))
                         parsaruments += ( " " + 
@@ -139,8 +142,12 @@ namespace PyLauncher
                     else
                         parsaruments += (" " + s);
                 }
-                string runcommandarguments = Testtime.arguments + parsaruments;
-                Console.WriteLine(runcommandarguments);
+                string runcommandarguments = theparameters.arguments + parsaruments;
+
+
+                testrunnernostop.Load(theparameters,
+                    (string)textBox1.Text.Substring(textBox1.Text.Length - 12));
+                /*
                 Process p = new Process(); // create process (i.e., the python program)
                 
                 p.StartInfo.FileName = Testtime.filename;//python.exe
@@ -159,6 +166,7 @@ namespace PyLauncher
                 if (p.ExitCode != 0)
                 {               
                 }
+                */
                // itemtorun = Testtime.filename + Testtime.arguments + Testtime.Parsstring[0] +
                //     Testtime.Parsstring[1] + Testtime.Parsstring[2] + Testtime.Parsstring[3] + Testtime.Parsstring[4];
               //  Console.WriteLine(itemtorun);

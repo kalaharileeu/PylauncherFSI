@@ -2,6 +2,8 @@
 
 namespace PyLauncher
 {
+    /*Test runner no stop will run a process and not
+    stop */
     public class TestrunnerNOstop : ITestrunner
     {
         private Parameter.Test testparameters;
