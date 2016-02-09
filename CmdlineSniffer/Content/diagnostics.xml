@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Diagnostics>
+  <Test>
+    <id>Vogel Station check</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\mercurial\pcu_test\testlib\enphase_station</workingdirectory>
+    <arguments>C:\workspace\mercurial\pcu_test\testlib\enphase_station\station.py</arguments>
+    <Parsstring></Parsstring>
+    <Parsstring></Parsstring>
+    <Parsstring></Parsstring>
+    <Parsstring></Parsstring>
+    <Parsstring></Parsstring>
+    <interceptio>true</interceptio>
+  </Test>
+</Diagnostics>

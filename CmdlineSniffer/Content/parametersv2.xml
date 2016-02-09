@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parameter>
+  <Quicktest>--test_name DistAndEffBurst</Quicktest>
+  <Quicktest>--test_name RealPwrMap</Quicktest>
+  <Quicktest>--test_name RealPwrMapBurst</Quicktest>
+  <Setupparameters>
+    <id>VOGEL</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
+    <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN-2</Parsstring>
+    <Parsstring>-s 11</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>TESTNAME</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Setupparameters>
+  <Test>
+    <id>Vogel Sequencer Distortion and Eff.</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
+    <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN-2</Parsstring>
+    <Parsstring>-s 11</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name DistAndEff</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+    <interceptio>false</interceptio>
+  </Test>
+  <Test>
+    <id>Vogel Sequencer Realpower map with burst</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
+    <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN-2</Parsstring>
+    <Parsstring>-s 11</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+    <interceptio>false</interceptio>
+  </Test>
+  <Test>
+    <id>Vogel Station check</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\mercurial\pcu_test\testlib\enphase_station</workingdirectory>
+    <arguments>C:\workspace\mercurial\pcu_test\testlib\enphase_station\station.py</arguments>
+    <interceptio>true</interceptio>
+  </Test>
+  <Test>
+    <id>Diogenes Test time</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\teststuff</workingdirectory>
+    <arguments>C:\workspace\teststuff\testtime.py</arguments>
+    <interceptio>true</interceptio>
+  </Test>
+  <Test>
+    <id>Corvus Test time</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\workspace\teststuff</workingdirectory>
+    <arguments>C:\workspace\teststuff\testtime.py</arguments>
+    <interceptio>true</interceptio>
+  </Test>
+</Parameter>

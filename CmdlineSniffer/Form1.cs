@@ -33,14 +33,17 @@ namespace PyLauncher
             Serverreporter = new Report();
             CmdReader = new Readcmd();
             InitializeComponent();
-            xmltestmanager = new XmlManager<Parameter>();
             //tests = new Parameter();//I do not need this
             report1 = new Report();
             keepreporting = true;
-            tests = xmltestmanager.Load("Content/parametersv2.xml");// the the xmlfile the start off serialization
+            xmltestmanager = new XmlManager<Parameter>();
+            // the the xmlfile the start off serialization
+            //a instance of Parameter will be assigned to tests
+            tests = xmltestmanager.Load("Content/parametersv2.xml");
             foreach (Parameter.Test t in tests.tests)
             {
-                //listBox1.Items.Add(t.id);
+                /*saves all test name here so that it can be filtered later
+                when the product selection is done*/
                 storedvalues.Add(t.id);
             }
             textBox1.Focus();
@@ -163,6 +166,8 @@ namespace PyLauncher
 
             return "done from launcher: ";
         }
+
+
     }
 }
 

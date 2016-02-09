@@ -7,7 +7,8 @@ namespace PyLauncher
 {
     public partial class Form1 : Form
     {
-        //only populate vogel test items in the listbox 1
+        //only populate vog test items in the listbox 1
+        //use the storedvalue variable: data xml deserialization
         public void button1_Click(object sender, EventArgs e)
         {
             for (int k = listBox1.Items.Count - 1; k >= 0; --k)
@@ -22,21 +23,7 @@ namespace PyLauncher
                 {
                     listBox1.Items.Add(storedvalues[n]);
                 }
-                /*   if (listBox1.Items[n].ToString().Contains(removelistitem))
-                    {
-                        storedvalues.Add((string)listBox1.Items[n]);
-                        listBox1.Items.RemoveAt(n);
-                    }*/
             }
-            /*            string buttonid = "Testtime";
-                        Parameter.Test Testtime = new Parameter.Test();
-                        Testtime = tests.tests.Find(x => x.id.Equals(buttonid));//workds to find test id
-                        if (Testtime != null)
-                            Console.WriteLine("Found it");
-                        else
-                            Console.WriteLine("Did not find it");
-             */
-
         }
         //run the main process loop 
         private void button2_Click(object sender, EventArgs e)
@@ -46,7 +33,8 @@ namespace PyLauncher
             runmainprocess();
             Reporting();
         }
-        //only populate diogenes test items in the listbox 1
+        //only populate dioge test items in the listbox 1
+        //use the storedvalue variable: data xml deserialization
         private void button3_Click(object sender, EventArgs e)
         {
             for (int k = listBox1.Items.Count - 1; k >= 0; --k)
@@ -63,7 +51,8 @@ namespace PyLauncher
                 }
             }
         }
-        //only populate corvus test items in the listbox 1
+        //only populate corv test items in the listbox 1
+        //use the storedvalue variable: data xml deserialization
         private void button4_Click(object sender, EventArgs e)
         {
             for (int k = listBox1.Items.Count - 1; k >= 0; --k)
@@ -83,7 +72,10 @@ namespace PyLauncher
 
         private void button5_Click(object sender, EventArgs e)
         {
+            foreach (Parameter.Setupparameters s in tests.Listsetupparameters())
+            {
 
+            }
         }
 
         private void list_Box1DoubleClick(object sender, MouseEventArgs e)//list box 1 double cllick

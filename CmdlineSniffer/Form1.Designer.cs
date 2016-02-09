@@ -192,11 +192,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(378, 85);
+            this.label9.Location = new System.Drawing.Point(378, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(238, 13);
+            this.label9.Size = new System.Drawing.Size(172, 13);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Step 3: Below. Modify your queue if you want to. ";
+            this.label9.Text = "Step 3: Below. Modify your queue. ";
             // 
             // label10
             // 
@@ -282,6 +282,7 @@
             this.button5.TabIndex = 28;
             this.button5.Text = "Diagnostics";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox2
             // 
