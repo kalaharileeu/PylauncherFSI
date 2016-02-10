@@ -41,17 +41,17 @@ namespace PyLauncher
             //a instance of Parameter will be assigned to tests
             tests = xmltestmanager.Load("Content/parametersv2.xml");
             //Add the tests that does not have a quick test parameter in xml
-            foreach (Parameter.Test t in tests.tests)
+            foreach (Parameter.Test t in tests.Tests())
             {
                 /*saves all test name here so that it can be filtered later
                 when the product selection is done*/
                 storedvalues.Add(t.id);
             }
             //add the quicktest values to the list
-            foreach(Parameter.Setupparameters s in tests.Listsetupparameters())
-            {
-                storedvalues.Add(s.id);
-            }
+            //foreach(Parameter.Setupparameters s in tests.Listsetupparameters())
+            //{
+            //    storedvalues.Add(s.id);
+            //}
 
             textBox1.Focus();
         }
@@ -85,7 +85,7 @@ namespace PyLauncher
                             parametertext += (" " + 
                                 (string)textBox1.Text.Substring(textBox1.Text.Length - 12));
                         else
-                            parametertext += (" " + s);//add all the arguments together
+                            parametertext += (" " + s);//builds the command line string
                     }
                     textBox4.Clear();
                     textBox4.Text = thetest.arguments + parametertext;

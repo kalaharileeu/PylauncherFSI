@@ -12,15 +12,16 @@ namespace PyLauncher
         [XmlElement("Quicktest")]
         public List<string> Quicktest;
         // This is the class that will be deserialized.
-        //This setupparameters is used for quicktests
-        public class Setupparameters
+        //Quicktest: This setupparameters is used for quicktests
+        public class Setupparameters : Test
         {
-            public string id;//Inverter nickname
-            public string filename;//"for ex. pyhton.exe"
-            public string workingdirectory;
-            public string arguments;//"path of to .py"
-            [XmlElement("Parsstring")]
-            public List<string> Parsstring;//5 for smoke test
+            //using the new keyword to heide the original Test variables
+            //public new string id;//Inverter nickname
+           // public new string filename;//"for ex. pyhton.exe"
+            //public new string workingdirectory;
+            //public new string arguments;//"path of to .py"
+            //[XmlElement("Parsstring")]
+           // public new List<string> Parsstring;//5 for smoke test
             public Setupparameters()
             {
                 Parsstring = new List<string>();
@@ -76,8 +77,11 @@ namespace PyLauncher
             tests = new List<Test>();
             listparameters = new List<Setupparameters>();
         }
-
-        public List<Setupparameters> Listsetupparameters()
+        /*
+        Test builder does the final finishing off on quicktest, it then add it to 
+        the tests list ready for the Form1 to acces and run
+        */
+        public List<Test> Tests()
         {
             //For each string of quicktest create a new test in a list
             foreach (string s in Quicktest)
@@ -87,9 +91,27 @@ namespace PyLauncher
                 //find the last elemnent in the list and insert the right test name
                 listparameters[listparameters.Count - 1].Inserttestname(s);
                 //change the test id so that it includes the test name
-                listparameters[listparameters.Count - 1].id += " " + s; 
+                listparameters[listparameters.Count - 1].id += " " + s;
+                tests.Add(listparameters[listparameters.Count - 1]);
             }
-            return listparameters;
+            return tests;
         }
+
+
+        //public List<Setupparameters> Listsetupparameters()
+        //{
+        //    //For each string of quicktest create a new test in a list
+        //    foreach (string s in Quicktest)
+        //    {
+        //        //use the copy constructor here
+        //        listparameters.Add(new Setupparameters(Setupgeneral));
+        //        //find the last elemnent in the list and insert the right test name
+        //        listparameters[listparameters.Count - 1].Inserttestname(s);
+        //        //change the test id so that it includes the test name
+        //        listparameters[listparameters.Count - 1].id += " " + s;
+        //        tests.Add(listparameters[listparameters.Count - 1]);
+        //    }
+        //    return listparameters;
+        //}
     }
 }
