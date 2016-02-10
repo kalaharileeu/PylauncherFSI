@@ -11,7 +11,7 @@ namespace PyLauncher
     {
         string status;
         string error;
-        string test;
+        string test;//used in url for reporting
         TestrunnerNOstop testrunnernostop;
         Report Serverreporter;
         Readcmd CmdReader;
@@ -40,16 +40,24 @@ namespace PyLauncher
             // the the xmlfile the start off serialization
             //a instance of Parameter will be assigned to tests
             tests = xmltestmanager.Load("Content/parametersv2.xml");
+            //Add the tests that does not have a quick test parameter in xml
             foreach (Parameter.Test t in tests.tests)
             {
                 /*saves all test name here so that it can be filtered later
                 when the product selection is done*/
                 storedvalues.Add(t.id);
             }
+            //add the quicktest values to the list
+            foreach(Parameter.Setupparameters s in tests.Listsetupparameters())
+            {
+                storedvalues.Add(s.id);
+            }
+
             textBox1.Focus();
         }
-
-        //this is a recursive, asynchrounous funstion function method runs asynchronously
+        /*This is the entry point, main recursive loop tests*/
+        /*this is a recursive, asynchrounous funstion function method runs asynchronously
+        until all the tests in listbox 2 is done*/
         private async void runmainprocess()
         {
             //if the listbox2 is not empty it will keep running
@@ -57,16 +65,15 @@ namespace PyLauncher
             if(listBox2.Items.Count != 0)
             {
                 string testtorun = (string)(listBox2.Items[0]);
+                //test used for url to report test
                 test = testtorun;
                 test = Regex.Replace(test, @"\s+", "%20");
-                Debug.WriteLine(test);
                 status = "Running";
                 //Add the item that is running now to listbox3
                 listBox3.Items.Add(testtorun);
                 //remove it from listbox 2
                 listBox2.Items.RemoveAt(0);
-
-                //**********get all the task parametrs here*********************
+                //**********get all the task parameters here*********************
                 Parameter.Test thetest = new Parameter.Test();
                 thetest = tests.tests.Find(x => x.id.Equals(testtorun));
                 if (thetest != null)
@@ -75,14 +82,15 @@ namespace PyLauncher
                     foreach (string s in thetest.Parsstring)
                     {
                         if (s.Contains("SERIAL_NUMBER"))
-                            parametertext += (" " + (string)textBox1.Text.Substring(textBox1.Text.Length - 12));
+                            parametertext += (" " + 
+                                (string)textBox1.Text.Substring(textBox1.Text.Length - 12));
                         else
                             parametertext += (" " + s);//add all the arguments together
                     }
                     textBox4.Clear();
                     textBox4.Text = thetest.arguments + parametertext;
                 }
-                //************END of finding the task parameters***********************
+                //************END of finding the task parameters*****************
                 //string value = report1.Reporttoserver(status, test, ref error);
                 //A tast gets kickef off here
                 string t = await Task.Run(() => Runtest(testtorun));
@@ -93,7 +101,7 @@ namespace PyLauncher
                     listBox3.Items.Clear();
                     listBox4.Items.Add(testtorun);
                 }
-                //recursive call.
+                //recursive call
                 runmainprocess();
             }
         }
@@ -166,8 +174,6 @@ namespace PyLauncher
 
             return "done from launcher: ";
         }
-
-
     }
 }
 

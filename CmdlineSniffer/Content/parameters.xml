@@ -1,226 +1,377 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parameter>
-  <?xml version="1.0" encoding="utf-8" ?>
-  <Parameter>
-    <Test>
-      <id>Vogel Smoke Test at room temp</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
-      <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>-t 0</Parsstring>
-      <Parsstring>--config</Parsstring>
-      <Parsstring>Frigate_Vogel_230V</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Smoke Test over temperature</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
-      <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>-t 1</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>--config</Parsstring>
-      <Parsstring>Frigate_Vogel_230V</Parsstring>
-    </Test>
-    <Test>
-      <id>Corvus 2LL 72 Cell Smoke Test at room temp</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
-      <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>-t 0</Parsstring>
-      <Parsstring>--config</Parsstring>
-      <Parsstring>Corvus_2LL_72_Cell</Parsstring>
-    </Test>
-    <Test>
-      <id>Corvus 2LL 72 Cell Smoke Test over temperature</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
-      <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>-t 1</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>--config</Parsstring>
-      <Parsstring>Corvus_2LL_72_Cell</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Stresswave</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\stress_wave_program.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Distortion and Eff. Burst</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--test_name DistAndEffBurst</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Distortion and Eff.</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--test_name DistAndEff</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map with burst</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--test_name RealPwrMapBurst</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map with burst -40</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq cold</Parsstring>
-      <Parsstring>--test_name RealPwrMapBurst</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map with burst 65</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq hot</Parsstring>
-      <Parsstring>--test_name RealPwrMapBurst</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--test_name RealPwrMap</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map -40</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq cold</Parsstring>
-      <Parsstring>--test_name RealPwrMap</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq Realpower map 65</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq hot</Parsstring>
-      <Parsstring>--test_name RealPwrMap</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq LoL HiL</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--test_name LoL_HiL</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq LoL HiL -40</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq cold</Parsstring>
-      <Parsstring>--test_name LoL_HiL</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
-    <Test>
-      <id>Vogel Seq LoL HiL 65</id>
-      <filename>python.exe</filename>
-      <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
-      <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
-      <Parsstring>--pcu_model S230-60-LN</Parsstring>
-      <Parsstring>--notes "VOGEL TESTING"</Parsstring>
-      <Parsstring>-c 3</Parsstring>
-      <Parsstring>-s 2</Parsstring>
-      <Parsstring>--split</Parsstring>
-      <Parsstring>--temp_seq hot</Parsstring>
-      <Parsstring>--test_name LoL_HiL</Parsstring>
-      <Parsstring>SERIAL_NUMBER</Parsstring>
-    </Test>
   <Test>
-    <id>Diogenes Test time</id>
+    <id>Vogel Smoke Test at room temp</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\teststuff</workingdirectory>
-    <arguments>C:\workspace\teststuff\testtime.py</arguments>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <interceptio>true</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Frigate_Vogel_230V</Parsstring>
   </Test>
   <Test>
-    <id>Vogel Test time weert wer wer wer wer wer wer werwt</id>
+    <id>Vogel Smoke Test over temperature</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\teststuff</workingdirectory>
-    <arguments>C:\workspace\teststuff\testtime.py</arguments>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <Parsstring></Parsstring>
-    <interceptio>true</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Frigate_Vogel_230V</Parsstring>
+  </Test>
+  <Test>
+    <id>Corvus 2LL 72 Cell Smoke Test at room temp</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Corvus_2LL_72_Cell</Parsstring>
+  </Test>
+  <Test>
+    <id>Corvus 2LL 72 Cell Smoke Test over temperature</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Corvus_2LL_72_Cell</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Stresswave</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\stress_wave_program.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Distortion and Eff. Burst</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name DistAndEffBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Distortion and Eff.</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name DistAndEff</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map with burst</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map with burst -40</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq cold</Parsstring>
+    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map with burst 65</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq hot</Parsstring>
+    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name RealPwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map -40</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq cold</Parsstring>
+    <Parsstring>--test_name RealPwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq Realpower map 65</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq hot</Parsstring>
+    <Parsstring>--test_name RealPwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq LoL HiL</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq LoL HiL -40</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq cold</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Seq LoL HiL 65</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq hot</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Smoke Test at room temp</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Diogenes_240V</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Smoke Test over temperature</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Diogenes_240V</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer Distortion and Eff. Burst</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name DistAndEffBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer Distortion and Eff.</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name DistAndEff</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer Realpower map with burst</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer Realpower map</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name RealPwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer LoL HiL</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer LoL HiL -40C</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--temp_seq cold</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer LoL HiL 65C</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--temp_seq hot</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer LoL HiL 25C</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts\</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--temp_seq room</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL_HiL</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Sequencer LoL208HiL240</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "Diogenes TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--test_name LoL208HiL240</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Seq -40 ReactiveMap</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq cold</Parsstring>
+    <Parsstring>--test_name ReactivePwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Seq 25 ReactiveMap</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq room</Parsstring>
+    <Parsstring>--test_name ReactivePwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
+  </Test>
+  <Test>
+    <id>Diogenes Seq 65 ReactiveMap</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\sequencer.py</arguments>
+    <Parsstring>--pcu_model S275-60-2LL-DiogenesRev4</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>--temp_seq hot</Parsstring>
+    <Parsstring>--test_name ReactivePwrMap</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
   </Test>
 </Parameter>

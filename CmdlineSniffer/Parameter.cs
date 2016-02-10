@@ -12,6 +12,7 @@ namespace PyLauncher
         [XmlElement("Quicktest")]
         public List<string> Quicktest;
         // This is the class that will be deserialized.
+        //This setupparameters is used for quicktests
         public class Setupparameters
         {
             public string id;//Inverter nickname
@@ -45,6 +46,7 @@ namespace PyLauncher
                     Parsstring[i] = realtestname;
                 }
             }
+
         }
         // This is the class that will be deserialized.
         public class Test
@@ -77,15 +79,16 @@ namespace PyLauncher
 
         public List<Setupparameters> Listsetupparameters()
         {
+            //For each string of quicktest create a new test in a list
             foreach (string s in Quicktest)
             {
                 //use the copy constructor here
                 listparameters.Add(new Setupparameters(Setupgeneral));
                 //find the last elemnent in the list and insert the right test name
                 listparameters[listparameters.Count - 1].Inserttestname(s);
-                
+                //change the test id so that it includes the test name
+                listparameters[listparameters.Count - 1].id += " " + s; 
             }
-
             return listparameters;
         }
     }

@@ -77,8 +77,8 @@ namespace PyLauncher
 
             }
         }
-
-        private void list_Box1DoubleClick(object sender, MouseEventArgs e)//list box 1 double cllick
+        //list box 1 double cllick
+        private void list_Box1DoubleClick(object sender, MouseEventArgs e)
         {
             if (textBox1.Text.Length < 12)
             {
@@ -94,7 +94,8 @@ namespace PyLauncher
 
             if (index != ListBox.NoMatches)//check if item is there
             {
-                string item = (string)(this.listBox1.Items[index]);//get cliked it fom listbox 1
+                //get clicked it from listbox 1
+                string item = (string)(this.listBox1.Items[index]);
                 listBox2.Items.Add(item);//add item to litbox 2
                 //MessageBox.Show(index.ToString());
             }
@@ -102,17 +103,17 @@ namespace PyLauncher
 
         private void list_box2DoubleClick(object sender, MouseEventArgs e)
         {
-            int index = this.listBox2.IndexFromPoint(e.Location);
+            //int index = this.listBox2.IndexFromPoint(e.Location);
 
-            if (index != ListBox.NoMatches)//check if item is there
-            {
-                object item = this.listBox2.Items[index];//get clicked it fom listbox 1
+            //if (index != ListBox.NoMatches)//check if item is there
+            //{
+            //    object item = this.listBox2.Items[index];//get clicked it fom listbox 1
 
-                if (index >= 0)
-                {
-                    this.listBox2.Items.RemoveAt(index);//remove item
-                }
-            }
+            //    if (index >= 0)
+            //    {
+            //        this.listBox2.Items.RemoveAt(index);//remove item
+            //    }
+            //}
         }
 
         private void list_box2Click(object sender, MouseEventArgs e)
@@ -138,6 +139,24 @@ namespace PyLauncher
                 if (index != ListBox.NoMatches)//check if item is there
                 {
                     object item = this.listBox2.Items[index];//get cliked it fom listbox 1
+
+                    if (index >= 0)
+                    {
+                        this.listBox2.Items.RemoveAt(index);//remove item
+                    }
+                }
+            }
+        }
+
+        private void list2_rightclick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int index = this.listBox2.IndexFromPoint(e.Location);
+
+                if (index != ListBox.NoMatches)//check if item is there
+                {
+                    object item = this.listBox2.Items[index];//get clicked it fom listbox 1
 
                     if (index >= 0)
                     {

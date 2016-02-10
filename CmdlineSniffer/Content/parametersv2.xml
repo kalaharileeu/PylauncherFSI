@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Parameter>
-  <Quicktest>--test_name DistAndEffBurst</Quicktest>
-  <Quicktest>--test_name RealPwrMap</Quicktest>
   <Quicktest>--test_name RealPwrMapBurst</Quicktest>
+  <Quicktest>--test_name ReactivePwrMap</Quicktest>
   <Setupparameters>
-    <id>VOGEL</id>
+    <id>Vogel</id>
     <filename>python.exe</filename>
     <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
     <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
@@ -15,28 +14,25 @@
     <Parsstring>SERIAL_NUMBER</Parsstring>
   </Setupparameters>
   <Test>
-    <id>Vogel Sequencer Distortion and Eff.</id>
+    <id>Vogel Smoke Test at room temp</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
-    <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
-    <Parsstring>--pcu_model S230-60-LN-2</Parsstring>
-    <Parsstring>-s 11</Parsstring>
-    <Parsstring>--split</Parsstring>
-    <Parsstring>--test_name DistAndEff</Parsstring>
-    <Parsstring>SERIAL_NUMBER</Parsstring>
-    <interceptio>false</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Frigate_Vogel_230V</Parsstring>
   </Test>
   <Test>
-    <id>Vogel Sequencer Realpower map with burst</id>
+    <id>Vogel Smoke Test over temperature</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\mercurial\pcu_test\scripts</workingdirectory>
-    <arguments>C:\workspace\mercurial\pcu_test\scripts\sequencer.py</arguments>
-    <Parsstring>--pcu_model S230-60-LN-2</Parsstring>
-    <Parsstring>-s 11</Parsstring>
-    <Parsstring>--split</Parsstring>
-    <Parsstring>--test_name RealPwrMapBurst</Parsstring>
-    <Parsstring>SERIAL_NUMBER</Parsstring>
-    <interceptio>false</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Frigate_Vogel_230V</Parsstring>
   </Test>
   <Test>
     <id>Vogel Station check</id>

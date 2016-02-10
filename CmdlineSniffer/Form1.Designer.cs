@@ -1,4 +1,6 @@
-﻿namespace PyLauncher
+﻿using System.Windows.Forms;
+
+namespace PyLauncher
 {
     partial class Form1
     {
@@ -93,6 +95,7 @@
             this.listBox2.TabIndex = 3;
             this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.list_box2Click);
             this.listBox2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_box2DoubleClick);
+            this.listBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.list2_rightclick);
             // 
             // label1
             // 
