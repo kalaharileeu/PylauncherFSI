@@ -35,24 +35,56 @@
     <Parsstring>Frigate_Vogel_230V</Parsstring>
   </Test>
   <Test>
-    <id>Vogel Station check</id>
+    <id>Corvus 2LL 72 Cell Smoke Test at room temp</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\mercurial\pcu_test\testlib\enphase_station</workingdirectory>
-    <arguments>C:\workspace\mercurial\pcu_test\testlib\enphase_station\station.py</arguments>
-    <interceptio>true</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Corvus_2LL_72_Cell</Parsstring>
   </Test>
   <Test>
-    <id>Diogenes Test time</id>
+    <id>Corvus 2LL 72 Cell Smoke Test over temperature</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\teststuff</workingdirectory>
-    <arguments>C:\workspace\teststuff\testtime.py</arguments>
-    <interceptio>true</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Corvus_2LL_72_Cell</Parsstring>
+  </Test>
+    <Test>
+    <id>Diogenes Smoke Test at room temp</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 0</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Diogenes_240V</Parsstring>
   </Test>
   <Test>
-    <id>Corvus Test time</id>
+    <id>Diogenes Smoke Test over temperature</id>
     <filename>python.exe</filename>
-    <workingdirectory>C:\workspace\teststuff</workingdirectory>
-    <arguments>C:\workspace\teststuff\testtime.py</arguments>
-    <interceptio>true</interceptio>
+    <workingdirectory>C:\Workspace\smoke_test</workingdirectory>
+    <arguments>C:\Workspace\smoke_test\smoke_test.py</arguments>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>-t 1</Parsstring>
+    <Parsstring>-c 3</Parsstring>
+    <Parsstring>--config</Parsstring>
+    <Parsstring>Diogenes_240V</Parsstring>
+  </Test>
+  <Test>
+    <id>Vogel Stresswave</id>
+    <filename>python.exe</filename>
+    <workingdirectory>C:\Workspace\pcu_test\scripts</workingdirectory>
+    <arguments>C:\Workspace\pcu_test\scripts\stress_wave_program.py</arguments>
+    <Parsstring>--pcu_model S230-60-LN</Parsstring>
+    <Parsstring>--notes "VOGEL TESTING"</Parsstring>
+    <Parsstring>-s 2</Parsstring>
+    <Parsstring>--split</Parsstring>
+    <Parsstring>SERIAL_NUMBER</Parsstring>
   </Test>
 </Parameter>

@@ -75,23 +75,23 @@ namespace PyLauncher
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(5, 156);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(340, 424);
+            this.listBox1.Size = new System.Drawing.Size(352, 418);
             this.listBox1.TabIndex = 2;
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_Box1DoubleClick);
             // 
             // listBox2
             // 
-            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
+            this.listBox2.ItemHeight = 18;
             this.listBox2.Location = new System.Drawing.Point(376, 156);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(364, 424);
+            this.listBox2.Size = new System.Drawing.Size(364, 418);
             this.listBox2.TabIndex = 3;
             this.listBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.list_box2Click);
             this.listBox2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_box2DoubleClick);

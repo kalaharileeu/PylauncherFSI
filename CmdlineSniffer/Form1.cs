@@ -39,7 +39,7 @@ namespace PyLauncher
             xmltestmanager = new XmlManager<Parameter>();
             // the the xmlfile the start off serialization
             //a instance of Parameter will be assigned to tests
-            tests = xmltestmanager.Load("Content/parametersv2.xml");
+            tests = xmltestmanager.Load("Content/rackparameterv2.xml");
             //Add the tests that does not have a quick test parameter in xml
             foreach (Parameter.Test t in tests.Tests())
             {

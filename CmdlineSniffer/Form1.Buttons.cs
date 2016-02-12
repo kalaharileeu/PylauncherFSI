@@ -72,10 +72,7 @@ namespace PyLauncher
 
         private void button5_Click(object sender, EventArgs e)
         {
-            foreach (Parameter.Setupparameters s in tests.Listsetupparameters())
-            {
 
-            }
         }
         //list box 1 double cllick
         private void list_Box1DoubleClick(object sender, MouseEventArgs e)
