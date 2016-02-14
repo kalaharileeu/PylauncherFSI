@@ -4,11 +4,9 @@ using System.Xml.Serialization;
 
 namespace PyLauncher
 {
-    // This is the class that will be deserialized.
+    //This is the class that will be deserialized from xml
     public class Parameter
     {
-        //[XmlIgnore]
-        //List<Setupparameters> listparameters;
         [XmlElement("Quicktest")]
         public List<string> Quicktest;
         [XmlElement("Temperature")]
@@ -21,13 +19,8 @@ namespace PyLauncher
         //Quicktest: This setupparameters is used for quicktests
         public class Setupparameters : Test
         {
-            //using the new keyword to heide the original Test variables
-            //public new string id;//Inverter nickname
-           // public new string filename;//"for ex. pyhton.exe"
-            //public new string workingdirectory;
-            //public new string arguments;//"path of to .py"
-            //[XmlElement("Parsstring")]
-           // public new List<string> Parsstring;//5 for smoke test
+            /*Data members.Inherited from Test:
+            id, filename, workingdirectory, arguments,  List<string> Parsstring*/
             public Setupparameters()
             {
                 Parsstring = new List<string>();
@@ -49,7 +42,7 @@ namespace PyLauncher
                 i = Parsstring.FindIndex(x => x == "TESTNAME");
                 if (1 != -1)
                 {
-                    //I should always be the same. 3
+                    //I should always be the same. 3(position in xml file)
                     Parsstring[i] = realtestname;
                 }
             }
@@ -91,8 +84,8 @@ namespace PyLauncher
             listparameters = new List<Setupparameters>();
         }
         /*
-        Test builder does the final finishing off on quicktest, it then add it to
-        the tests list ready for the Form1 to acces and run
+        tests gets populated in 2 ways, XML deserialization and with Tests() below.
+        Tests add the quicktest to the tests list when it si called from User class
         */
         public List<Test> Tests()
         {

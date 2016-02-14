@@ -47,15 +47,10 @@ namespace PyLauncher
                 when the product selection is done*/
                 storedvalues.Add(t.id);
             }
-            //add the quicktest values to the list
-            //foreach(Parameter.Setupparameters s in tests.Listsetupparameters())
-            //{
-            //    storedvalues.Add(s.id);
-            //}
-
             textBox1.Focus();
         }
-        /*This is the entry point, main recursive loop tests*/
+        /*Recursive function below:
+        This is the entry point, main recursive loop tests*/
         /*this is a recursive, asynchrounous funstion function method runs asynchronously
         until all the tests in listbox 2 is done*/
         private async void runmainprocess()
@@ -64,6 +59,7 @@ namespace PyLauncher
             //launching processes
             if(listBox2.Items.Count != 0)
             {
+                //find the first test in the list
                 string testtorun = (string)(listBox2.Items[0]);
                 //test used for url to report test
                 test = testtorun;
@@ -91,8 +87,7 @@ namespace PyLauncher
                     textBox4.Text = thetest.arguments + parametertext;
                 }
                 //************END of finding the task parameters*****************
-                //string value = report1.Reporttoserver(status, test, ref error);
-                //A tast gets kickef off here
+                //A task gets kickef off here
                 string t = await Task.Run(() => Runtest(testtorun));
                 if (t.Contains("done"))
                 {
@@ -168,7 +163,6 @@ namespace PyLauncher
             }
             else
             {
-                Console.WriteLine(" Did not find the test id from XML file/n");
                 return "Could not find the test";
             }
 
